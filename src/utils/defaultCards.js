@@ -12,7 +12,6 @@ export const defaultCards = [
         text: 'порций',
       },
       {
-        number: null,
         text: 'мышь в подарок',
       },
     ],
@@ -33,6 +32,28 @@ export const defaultCards = [
       {
         number: 2,
         text: 'мыши в подарок',
+      },
+    ],
+    isAvailable: true,
+  },
+  {
+    id: 2,
+    title: 'Нямушка',
+    subtitle: 'Сказочное заморское яство',
+    filling: 'с курой',
+    description: 'Филе из цыплят с трюфелями в бульоне.',
+    weight: '5',
+    additional: [
+      {
+        number: 100,
+        text: 'порций',
+      },
+      {
+        number: 5,
+        text: 'мышей в подарок',
+      },
+      {
+        text: 'заказчик доволен',
       },
     ],
     isAvailable: false,

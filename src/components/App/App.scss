@@ -1,0 +1,18 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  background-image: url('../../assets/images/bg.png');
+}
+
+.promo {
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-info;
+  font-family: 'Exo2', sans-serif;
+  font-weight: 100;
+}

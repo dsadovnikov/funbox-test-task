@@ -22,7 +22,8 @@ const Card = ({ product }) => {
     cardClasses.push('card_hovered');
   }
 
-  const onClick = () => {
+  const onClick = (e) => {
+    e.preventDefault();
     if (status !== 'disabled') {
       status === 'default' ? setStatus('selected') : setStatus('default');
       status === 'default' ? setIsHovered(false) : setIsHovered(true);
@@ -78,9 +79,9 @@ const Card = ({ product }) => {
       {status === 'default' ? (
         <p className="card__slogan">
           Чего сидишь? Порадуй котэ,{' '}
-          <button className="card__buy-button" type="button">
+          <span className="card__buy-button">
             <span className="card__buy-button-text">купи</span>.
-          </button>
+          </span>
         </p>
       ) : null}
       {status === 'selected' ? (
