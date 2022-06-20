@@ -5,6 +5,7 @@
   align-items: center;
   width: 100vw;
   min-height: 100vh;
+  padding: 0 20px;
   padding-bottom: 80px;
   background-image: url('../../assets/images/bg.png');
 }
@@ -15,4 +16,5 @@
   color: $color-info;
   font-family: 'Exo2', sans-serif;
   font-weight: 100;
+  text-align: center;
 }
