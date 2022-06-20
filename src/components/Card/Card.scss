@@ -1,0 +1,171 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  &__border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 480px;
+    margin-bottom: 14px;
+    background-image: linear-gradient(
+      135deg,
+      transparent 30px,
+      $color-default 0
+    );
+    border-radius: 10px;
+    transition: background-image 0.2s ease;
+  }
+  &__background {
+    width: 312px;
+    height: 472px;
+    border-radius: 7px;
+    background-image: linear-gradient(
+      135deg,
+      transparent 28.5px,
+      $color-fill 0
+    );
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 17px 12px 12px 44px;
+    border-radius: 7px;
+    background-image: url('../../assets/images/cat.png');
+    background-position: bottom -12px left -4px;
+    background-repeat: no-repeat;
+  }
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 17px;
+    padding-left: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color-text-secondary;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 48px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $color-text-primary;
+  }
+  &__filling {
+    padding-left: 3px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  &__additional {
+    padding-left: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-text-secondary;
+  }
+  &__additional-number {
+    font-weight: 700;
+  }
+  &__weight {
+    align-self: flex-end;
+    margin-top: auto;
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+    background-color: $color-default;
+    border-radius: 50%;
+    font-size: 42px;
+    line-height: 22px;
+    color: $color-info;
+    text-align: center;
+    transition: background-color 0.2s ease;
+  }
+  &__kg {
+    font-size: 21px;
+  }
+  &__slogan {
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-info;
+  }
+  &__buy-button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: $color-default;
+    transition: color 0.2s ease;
+  }
+  &__buy-button-text {
+    border-bottom: 1px dashed $color-default;
+  }
+  &__description {
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-info;
+  }
+  &__disabled {
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-warning;
+  }
+}
+
+.card_hovered {
+  .card__border {
+    background: linear-gradient(135deg, transparent 30px, $color-hover 0);
+  }
+  .card__weight {
+    background-color: $color-hover;
+  }
+  .card__buy-button {
+    color: $color-hover;
+  }
+  &__buy-button-text {
+    border-bottom: 1px dashed $color-hover;
+  }
+}
+
+.card_selected {
+  .card__border {
+    background: linear-gradient(135deg, transparent 30px, $color-selected 0);
+  }
+  .card__weight {
+    background-color: $color-selected;
+  }
+}
+
+.card_selected.card_hovered {
+  .card__border {
+    background: linear-gradient(
+      135deg,
+      transparent 30px,
+      $color-selected-hover 0
+    );
+  }
+  .card__subtitle {
+    color: $color-selected-hover;
+  }
+  .card__weight {
+    background-color: $color-selected-hover;
+  }
+}
+
+.card_disabled {
+  cursor: default;
+  .card__border {
+    background: linear-gradient(135deg, transparent 30px, $color-disabled 0);
+  }
+  .card__container {
+    opacity: 0.5;
+  }
+  .card__title {
+    opacity: 0.5;
+  }
+  .card__weight {
+    background-color: $color-disabled;
+  }
+}
